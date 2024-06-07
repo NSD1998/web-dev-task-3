@@ -21,7 +21,7 @@ A simple and interactive To-Do List application built with HTML, CSS, and JavaSc
 1. Clone the repository:
 
     ```bash
-    
+    https://github.com/NSD1998/web-dev-task-3.git
     ```
 
 2. Navigate to the project directory:
