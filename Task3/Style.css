@@ -1,0 +1,163 @@
+/* Existing styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #282c34;
+    color: #61dafb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #20232a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 360px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #61dafb;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+select {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #333;
+    color: #61dafb;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #61dafb;
+    outline: none;
+}
+
+button {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    background-color: #61dafb;
+    color: #20232a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    background: #333;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0; /* Added margin here */
+    transition: background 0.3s, transform 0.3s;
+}
+
+li:nth-child(even) {
+    background: #3a3f47;
+}
+
+li:hover {
+    background: #444;
+    transform: translateX(5px);
+}
+
+.priority {
+    margin-right: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.low {
+    color: #28a745;
+}
+
+.medium {
+    color: #ffc107;
+}
+
+.high {
+    color: #dc3545;
+}
+
+button.delete, button.edit, button.status {
+    background-color: #e74c3c;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+}
+
+button.delete:hover, button.edit:hover, button.status:hover {
+    background-color: #c0392b;
+}
+
+button.edit {
+    background-color: #f39c12;
+}
+
+button.edit:hover {
+    background-color: #e67e22;
+}
+
+button.status {
+    background-color: #28a745;
+}
+
+button.status:hover {
+    background-color: #218838;
+}
+
+/* New styles for completed and pending tasks */
+.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.pending .task-text {
+    text-decoration: none;
+    color: #61dafb;
+}
+
+li.completed {
+    background: rgba(173, 216, 230, 0.2);
+}
+
+li.pending {
+    background: rgba(255, 182, 193, 0.2);
+}
