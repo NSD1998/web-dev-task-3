@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const task = { text: taskText, priority: priority, status: 'pending' };
-        addTaskToDOM(task);
         saveTask(task);
         taskInput.value = ''; // Clear the input field
+        loadTasks(); // Reload tasks to ensure correct order
     }
 
     function addTaskToDOM(task) {
@@ -119,12 +119,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadTasks() {
+        taskList.innerHTML = ''; // Clear the task list before loading
         const tasks = getTasks();
+        tasks.sort(comparePriority); // Sort tasks by priority
         tasks.forEach(task => {
             if (task.text && task.priority) {
                 addTaskToDOM(task);
             }
         });
+    }
+
+    function comparePriority(a, b) {
+        const priorities = { high: 1, medium: 2, low: 3 };
+        return priorities[a.priority] - priorities[b.priority];
     }
 
     function getTasks() {
