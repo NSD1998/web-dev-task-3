@@ -1,7 +1,7 @@
-/* Existing styles */
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #282c34;
+    background-color: #f0f1f3;
     color: #61dafb;
     margin: 0;
     padding: 0;
@@ -81,7 +81,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px 0; /* Added margin here */
+    margin: 5px 0; 
     transition: background 0.3s, transform 0.3s;
 }
 
@@ -143,7 +143,7 @@ button.status:hover {
     background-color: #218838;
 }
 
-/* New styles for completed and pending tasks */
+
 .completed .task-text {
     text-decoration: line-through;
     color: #999;
